@@ -13,6 +13,7 @@
 		18E724E0287F5CEB00791C70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E724DF287F5CEB00791C70 /* Preview Assets.xcassets */; };
 		18E724E8287F75A600791C70 /* GeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E724E7287F75A600791C70 /* GeometryReader.swift */; };
 		18E724EA287F7F1C00791C70 /* ScrollViewAndLazy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E724E9287F7F1C00791C70 /* ScrollViewAndLazy.swift */; };
+		18E724EC288062A200791C70 /* NavigationLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E724EB288062A200791C70 /* NavigationLinkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		18E724DF287F5CEB00791C70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18E724E7287F75A600791C70 /* GeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReader.swift; sourceTree = "<group>"; };
 		18E724E9287F7F1C00791C70 /* ScrollViewAndLazy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewAndLazy.swift; sourceTree = "<group>"; };
+		18E724EB288062A200791C70 /* NavigationLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				18E724E7287F75A600791C70 /* GeometryReader.swift */,
 				18E724E9287F7F1C00791C70 /* ScrollViewAndLazy.swift */,
+				18E724EB288062A200791C70 /* NavigationLinkView.swift */,
 			);
 			path = exercises;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E724DB287F5CE900791C70 /* ContentView.swift in Sources */,
+				18E724EC288062A200791C70 /* NavigationLinkView.swift in Sources */,
 				18E724D9287F5CE900791C70 /* MoonshotApp.swift in Sources */,
 				18E724E8287F75A600791C70 /* GeometryReader.swift in Sources */,
 				18E724EA287F7F1C00791C70 /* ScrollViewAndLazy.swift in Sources */,
