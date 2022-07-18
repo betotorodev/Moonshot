@@ -12,11 +12,6 @@ struct MissionView: View {
   let mission: Mission
   let astronauts: [String: Astronaut]
   
-  init(mission: Mission, astronauts: [String: Astronaut]) {
-    self.mission = mission
-    self.astronauts = astronauts
-  }
-  
   var body: some View {
     GeometryReader { geometry in
       ScrollView {
