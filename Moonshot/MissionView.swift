@@ -8,23 +8,13 @@
 import SwiftUI
 
 struct MissionView: View {
-  struct CrewMember {
-    let role: String
-    let astronaut: Astronaut
-  }
+  
   let mission: Mission
-  let crew: [CrewMember]
+  let astronauts: [String: Astronaut]
   
   init(mission: Mission, astronauts: [String: Astronaut]) {
     self.mission = mission
-    
-    self.crew = mission.crew.map { member in
-      if let astronaut = astronauts[member.name] {
-        return CrewMember(role: member.role, astronaut: astronaut)
-      } else {
-        fatalError("Missing \(member.name)")
-      }
-    }
+    self.astronauts = astronauts
   }
   
   var body: some View {
@@ -42,10 +32,7 @@ struct MissionView: View {
             .foregroundColor(.white.opacity(0.5))
           
           VStack(alignment: .leading) {
-            Rectangle()
-              .frame(height: 2)
-              .foregroundColor(.lightBackground)
-              .padding(.vertical)
+            RectangleView()
 
             Text("Mission Highlights")
               .font(.title.bold())
@@ -53,10 +40,7 @@ struct MissionView: View {
             
             Text(mission.description)
             
-            Rectangle()
-                .frame(height: 2)
-                .foregroundColor(.lightBackground)
-                .padding(.vertical)
+            RectangleView()
             
             Text("Crew")
               .font(.title.bold())
@@ -64,35 +48,7 @@ struct MissionView: View {
           }
           .padding(.horizontal)
           
-          ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-              ForEach(crew, id: \.role) { crewMember in
-                NavigationLink {
-                  AstronautView(astronaut: crewMember.astronaut)
-                } label: {
-                  HStack {
-                    Image(crewMember.astronaut.id)
-                      .resizable()
-                      .frame(width: 104, height: 72)
-                      .clipShape(Capsule())
-                      .overlay(
-                        Capsule()
-                          .strokeBorder(.white, lineWidth: 1)
-                      )
-                    
-                    VStack(alignment: .leading) {
-                      Text(crewMember.astronaut.name)
-                        .foregroundColor(.white)
-                        .font(.headline)
-                      Text(crewMember.role)
-                        .foregroundColor(.secondary)
-                    }
-                  }
-                  .padding(.horizontal)
-                }
-              }
-            }
-          }
+          CrewView(mission: mission, astronauts: astronauts)
           
         }
         .padding(.bottom)
