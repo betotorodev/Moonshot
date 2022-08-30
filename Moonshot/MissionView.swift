@@ -21,6 +21,7 @@ struct MissionView: View {
             .scaledToFit()
             .frame(maxWidth: geometry.size.width * 0.6)
             .padding(.top)
+            .accessibilityLabel("The mission badge for \(mission.displayName)")
           
           Text(mission.formattedLaunchDate2)
             .font(.caption)
